@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Ray Tracer</title>
+  </head>
+
+  <body onload="main()">
+    <h1>Javascript Ray Tracer</h1>
+    <canvas id="canvas" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas><br>
+
+    recursion depth: 
+    <select id="depth">
+      <option value=0>0
+      <option value=1>1
+      <option value=2>2
+      <option value=3>3
+      <option value=4 selected="selected">4
+    </select><br>
+    lights: 
+    <input id="light1" type="checkbox" value="light1" checked>Light near
+    <input id="light2" type="checkbox" value="light2">Light far
+    <br>
+    objects:
+    <input id="redsphere" type="checkbox" checked>Red Sphere
+    <input id="bluesphere" type="checkbox" checked>Blue Sphere
+    <input id="greensphere" type="checkbox" checked>Green Sphere
+    <input id="yellowplane" type="checkbox" checked>Yellow Plane
+    <input id="greyplane" type="checkbox" checked>Grey Plane
+    <br>
+    <button onclick="setup_scene()">Render</button>
+
+
+    <p>&copy Copyright 2017 Minghui Liu</p>
+    <p>Email: minghui.liu.2017 at trincoll.edu</p>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="gl-matrix.js"></script>
+    <script src="ray_tracer.js"></script>
+  </body>
+</html>
