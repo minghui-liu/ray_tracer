@@ -92,7 +92,7 @@ var kEpsilon = 0.01;
 var ambient_light = 2;
 var camera_pos = vec3.fromValues(0, 1, 0);
 var fov = 90;     // field of vision in degrees
-var PI = 3.141592653589793238462643383279;
+var PI = Math.PI;
 var recursion_depth = 4;
 
 
@@ -160,10 +160,11 @@ function render() {
 
 
 function assign_color(raw_data, r, c, width, color) {
-  raw_data[r*width*4+c*4]   = color[0];     // R
-  raw_data[r*width*4+c*4+1] = color[1];     // G
-  raw_data[r*width*4+c*4+2] = color[2];     // B
-  raw_data[r*width*4+c*4+3] = 255;          // Alpha: default to 255
+  var index = r*width*4+c*4;
+  raw_data[index+0]   = color[0];   // R
+  raw_data[index+1] = color[1];     // G
+  raw_data[index+2] = color[2];     // B
+  raw_data[index+3] = 255;          // Alpha: default to 255
 }
 
 function trace_ray(origin, direction, t_min, t_max, depth) {
