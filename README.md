@@ -1,5 +1,4 @@
-# Javascript Simple Ray Tracer
-This is a ray tracing implemented in javascript. 
+# In-browser Ray Tracer implemented in Javascript
 
 ![Screenshot](readme_images/image.png)
 
